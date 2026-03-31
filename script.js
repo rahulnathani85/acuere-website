@@ -2,9 +2,8 @@
 // ACUERE CONSULTANCY - Website Script
 // ========================================
 
-// Supabase Configuration (will be set after Supabase project is created)
-const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+// Web3Forms Access Key (replace with your key from https://web3forms.com)
+const WEB3FORMS_KEY = '4eac0b96-234d-4d37-b7b9-409875953516';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     fadeElements.forEach(el => observer.observe(el));
 
-    // Contact form handler with Supabase
+    // Contact form handler with Web3Forms
     const form = document.getElementById('contactForm');
     if (form) {
         form.addEventListener('submit', async (e) => {
@@ -56,38 +55,26 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
 
             const formData = new FormData(form);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone') || null,
-                service: formData.get('service'),
-                message: formData.get('message') || null,
-                created_at: new Date().toISOString()
-            };
+            formData.append('access_key', WEB3FORMS_KEY);
+            formData.append('subject', 'New Inquiry - Acuere Consultancy Website');
+            formData.append('from_name', 'Acuere Website');
 
             try {
-                // Send to Supabase
-                const response = await fetch(`${SUPABASE_URL}/rest/v1/contact_inquiries`, {
+                const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'apikey': SUPABASE_ANON_KEY,
-                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                        'Prefer': 'return=minimal'
-                    },
-                    body: JSON.stringify(data)
+                    body: formData
                 });
 
-                if (response.ok) {
-                    // Show success message
-                    showFormMessage(form, 'success', `Thank you ${data.name}! Your inquiry has been received. We will get back to you within 24 hours.`);
+                const result = await response.json();
+
+                if (result.success) {
+                    showFormMessage(form, 'success', `Thank you ${formData.get('name')}! Your inquiry has been received. We will get back to you within 24 hours.`);
                     form.reset();
                 } else {
-                    throw new Error('Submission failed');
+                    throw new Error(result.message || 'Submission failed');
                 }
             } catch (error) {
                 console.error('Form submission error:', error);
-                // Show error but still thank the user
                 showFormMessage(form, 'error', 'There was an issue submitting the form. Please email us directly at rahul@acuereconsultancy.com or call +91 98339 31354.');
             } finally {
                 submitBtn.textContent = originalText;
@@ -110,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Show form success/error message
 function showFormMessage(form, type, message) {
-    // Remove any existing message
     const existing = form.parentElement.querySelector('.form-message');
     if (existing) existing.remove();
 
@@ -119,6 +105,5 @@ function showFormMessage(form, type, message) {
     div.textContent = message;
     form.parentElement.insertBefore(div, form.nextSibling);
 
-    // Auto-remove after 8 seconds
     setTimeout(() => div.remove(), 8000);
 }
