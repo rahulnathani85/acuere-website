@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Acuere Consultancy</title>
+    <meta name="description" content="Get in touch with Acuere Consultancy to discuss your valuation or advisory requirements. Contact CA Rahul Nathani in Mumbai.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo.jpg" alt="Acuere Consultancy" class="nav-logo-img">
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="services.html">Services <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+                <ul class="dropdown-menu">
+                    <li><a href="valuations.html">Valuations</a></li>
+                    <li><a href="cfo-services.html">CFO Services</a></li>
+                    <li><a href="audit-forensics.html">Internal Audit &amp; Forensics</a></li>
+                    <li><a href="investment-banking.html">Investment Banking</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p class="page-subtitle">Get in touch to discuss your valuation or advisory requirements.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Left Column: Contact Info -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>CA Rahul Nathani</h3>
+                    <p class="contact-title">Partner</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+919833931354">+91 98339 31354</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <p><a href="mailto:rahul@acuereconsultancy.com">rahul@acuereconsultancy.com</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Location</h4>
+                    <p>505, Garnet Palladium, Panchbawadi,<br>Goregaon East, Mumbai - 400063</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Office Hours</h4>
+                    <p>Monday - Saturday<br>10:00 AM - 7:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Contact Form -->
+            <div class="contact-form-wrapper">
+                <form id="contactForm" class="contact-form" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Interest *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="Business Valuation">Business Valuation</option>
+                            <option value="CFO Services">CFO Services</option>
+                            <option value="Internal Audit &amp; Forensics">Internal Audit &amp; Forensics</option>
+                            <option value="Investment Banking">Investment Banking</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="images/logo.jpg" alt="Acuere Consultancy" class="footer-logo-img">
+                </div>
+                <p>Independent valuation and financial advisory firm based in Mumbai, India. IBBI-registered Valuers and Chartered Accountants.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="valuations.html">Valuations</a>
+                <a href="cfo-services.html">CFO Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="valuations.html">Business Valuations</a>
+                <a href="cfo-services.html">CFO Advisory</a>
+                <a href="audit-forensics.html">Internal Audit &amp; Forensics</a>
+                <a href="investment-banking.html">Investment Banking</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><strong>CA Rahul Nathani</strong></p>
+                <p>+91 98339 31354</p>
+                <p>rahul@acuereconsultancy.com</p>
+                <p>505, Garnet Palladium, Panchbawadi,<br>Goregaon East, Mumbai - 400063</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Acuere Consultancy. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
