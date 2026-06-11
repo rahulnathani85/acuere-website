@@ -1,0 +1,10 @@
+# Robots.txt for acuereconsultancy.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://acuereconsultancy.com/sitemap.xml
+
+# Disallow admin/system files
+Disallow: /web.config
+Disallow: /CNAME
