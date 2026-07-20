@@ -56,9 +56,15 @@
     </url>
     <url>
         <loc>https://acuereconsultancy.com/blog.html</loc>
-        <lastmod>2026-04-07</lastmod>
+        <lastmod>2026-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://acuereconsultancy.com/blog/when-registered-valuer-required.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://acuereconsultancy.com/blog/choosing-registered-valuer.html</loc>
