@@ -17,7 +17,7 @@ What I think the board and the independent directors should expect:
 
 The report goes on the company's website and is referred to in the meeting notice, so shareholders read it too.
 
-I've written a short note on this: [link to article]
+I've written a short note on this: https://acuereconsultancy.com/blog/control-premium-preferential-issue-valuation-report.html (article must go live on main first)
 
 #Valuation #SEBI #RegisteredValuer #PreferentialIssue #CorporateFinance
 
