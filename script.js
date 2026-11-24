@@ -198,11 +198,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
                 const result = await response.json();
                 if (result.success) {
+                    if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'contact', service: formData.get('service') || '' });
                     showFormMessage(form, 'success', `Thank you ${formData.get('name')}! Your inquiry has been received. We will get back to you within 24 hours.`);
                     form.reset();
                 } else { throw new Error(result.message || 'Submission failed'); }
             } catch (error) {
                 console.error('Form submission error:', error);
+                if (typeof gtag === 'function') gtag('event', 'contact_form_error', { form_name: 'contact' });
                 showFormMessage(form, 'error', 'There was an issue submitting the form. Please email us directly at rahul@acuereconsultancy.com or call +91 98339 31354.');
             } finally {
                 submitBtn.textContent = originalText;
@@ -221,3 +223,15 @@ function showFormMessage(form, type, message) {
     form.parentElement.insertBefore(div, form.nextSibling);
     setTimeout(() => div.remove(), 8000);
 }
+
+// Track clicks on email, phone and WhatsApp links as enquiries
+document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href]');
+    if (!a || typeof gtag !== 'function') return;
+    const href = a.getAttribute('href') || '';
+    let method = null;
+    if (href.startsWith('mailto:')) method = 'email';
+    else if (href.startsWith('tel:')) method = 'phone';
+    else if (href.includes('wa.me') || href.includes('whatsapp.com')) method = 'whatsapp';
+    if (method) gtag('event', 'contact_click', { method: method, page: location.pathname });
+});
