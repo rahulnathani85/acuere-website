@@ -719,3 +719,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .wf-bar { transition: none; }
     * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* WhatsApp floating button */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:999;display:flex;align-items:center;gap:8px;background:#1f8f4e;color:#fff;padding:12px 16px;border-radius:999px;font:600 14px/1 'Space Grotesk',sans-serif;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.wa-float:hover{background:#17733e;color:#fff}
+.wa-float svg{width:18px;height:18px;fill:currentColor}
+.cta-section .cta-second{margin-left:12px}
+@media (max-width:600px){.wa-float span{display:none}.wa-float{padding:14px}.cta-section .cta-second{margin-left:0;margin-top:12px}}
