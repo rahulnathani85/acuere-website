@@ -22,7 +22,8 @@ I've written a short note on this: https://acuereconsultancy.com/blog/control-pr
 #Valuation #SEBI #RegisteredValuer #PreferentialIssue #CorporateFinance
 
 
-POST 3 (23 Nov) - AIF independent valuer
+POST 3 (suggested Wed 25 Nov) - AIF independent valuer
+(Article already live. Reshare on the Acuere page the same day.)
 
 Since June 2023, an AIF's valuer can't just be anyone the manager is comfortable with. SEBI has set a test.
 
@@ -39,3 +40,23 @@ Category I and II AIFs need this valuation at least every six months. Category I
 I've put together a note on who qualifies and what managers should ask before appointing a valuer: https://acuereconsultancy.com/blog/aif-independent-valuer-sebi-eligibility.html
 
 #AIF #AlternativeInvestments #Valuation #SEBI #RegisteredValuer
+
+
+ACUERE COMPANY PAGE (suggested Mon 30 Nov) - Educational, Reg 163(3)
+(Links to the live listed-company article. Not the same wording as any personal post.)
+
+Preferential issues for consideration other than cash: what SEBI ICDR Regulation 163(3) requires.
+
+Since the January 2022 amendments to the SEBI ICDR Regulations, a listed company's preferential issue for consideration other than cash can only be a swap of shares.
+
+For boards and company secretaries planning such an issue:
+
+- The swap has to be supported by a valuation report from an independent Registered Valuer.
+- The report is submitted to the stock exchanges where the issuer's shares are listed.
+- If an exchange is not satisfied with the report, it can have the valuation done by another valuer.
+
+The question is not only what the listed company's shares are worth. It is whether the shares received in the swap support the number of shares being issued.
+
+Our note on the four ICDR situations that need an independent valuer: https://acuereconsultancy.com/blog/listed-company-registered-valuer-sebi-icdr.html
+
+#SEBI #PreferentialIssue #Valuation #ListedCompanies #CorporateFinance
